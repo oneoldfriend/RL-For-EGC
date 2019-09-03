@@ -1,0 +1,5 @@
+[32m[08-08 21:59:53 MainThread @logger.py:95][0m CUDA_VISIBLE_DEVICES found gpu count: 1
+[32m[08-08 21:59:53 MainThread @logger.py:95][0m CUDA_VISIBLE_DEVICES found gpu count: 1
+[32m[08-08 21:59:54 MainThread @logger.py:95][0m CUDA_VISIBLE_DEVICES found gpu count: 1
+[32m[08-08 21:59:54 MainThread @logger.py:95][0m CUDA_VISIBLE_DEVICES found gpu count: 1
+[32m[08-08 22:00:06 MainThread @logger.py:95][0m CUDA_VISIBLE_DEVICES found gpu count: 1
