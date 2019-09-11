@@ -82,6 +82,7 @@ class ElevatorAgent(Agent):
         ret_actions = list()
         for i in range(len(q_values)):  # number of elevators
             if (random.random() < self.exploration_ratio):
+            #if False:
                 action = random.randint(0, self._action_dim)
             else:
                 action = np.argmax(q_values[i])

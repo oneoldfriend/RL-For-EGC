@@ -53,6 +53,7 @@ class RL_dispatcher():
         self._algorithm = DQN(self._model, hyperparas)
         self._agent = ElevatorAgent(self._algorithm, self._obs_dim,
                                     self._act_dim)
+        #self._agent.restore('./model.ckpt')
         self._warm_up_size = 2000
         self._statistic_freq = 1000
         self._loss_queue = deque()
@@ -62,6 +63,7 @@ class RL_dispatcher():
         acc_reward = 0.0
 
         while self._global_step < self.max_episode:
+        #while True:
             # self.env.render()
             state = self.env.state
             action = self._agent.sample(state)

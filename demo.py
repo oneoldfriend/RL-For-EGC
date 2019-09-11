@@ -26,7 +26,7 @@ def run_main(args):
     parser.add_argument(
         '--iterations',
         type=int,
-        default=1000000,
+        default=20000000,
         help='total number of iterations')
     args = parser.parse_args(args)
     print('iterations:', args.iterations)
