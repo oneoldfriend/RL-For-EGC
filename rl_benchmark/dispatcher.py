@@ -70,9 +70,9 @@ class RL_dispatcher():
             state_, reward, done, info = self.env.step(action)
             output_info = self.learn_step(state, action, reward)
             acc_reward += reward
-            if (isinstance(output_info, dict) and len(output_info) > 0):
-                self.env.log_notice("%s", output_info)
-            if (self._global_step % 3600 == 0):
+            #if (isinstance(output_info, dict) and len(output_info) > 0):
+                #self.env.log_notice("%s", output_info)
+            if (self._global_step % (3600*8) == 0):
                 self.env.log_notice(
                     "Accumulated Reward: %f, Mansion Status: %s", acc_reward,
                     self.env.statistics)
