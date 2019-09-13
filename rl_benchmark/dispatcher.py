@@ -27,7 +27,7 @@ from parl.algorithms import DQN
 from parl.utils import ReplayMemory
 
 MEMORY_SIZE = 1000000
-BATCH_SIZE = 64
+BATCH_SIZE = 256
 
 
 class RL_dispatcher():
@@ -46,8 +46,8 @@ class RL_dispatcher():
         self._model = RLDispatcherModel(self._act_dim)
         hyperparas = {
             'action_dim': self._act_dim,
-            'lr': 5.0e-4,
-            'gamma': 0.998
+            'lr': 5.0e-3,
+            'gamma': 0.99
         }
 
         self._algorithm = DQN(self._model, hyperparas)
@@ -61,7 +61,7 @@ class RL_dispatcher():
     def run_episode(self):
         self.env.reset()
         acc_reward = 0.0
-
+        
         while self._global_step < self.max_episode:
         #while True:
             # self.env.render()
